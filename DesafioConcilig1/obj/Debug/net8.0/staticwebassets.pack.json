@@ -245,6 +245,18 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\wwwroot\\uploads\\contratos_20250601192047_5c74541a-8518-41ad-a5bc-f08fafd0f882.csv",
+      "PackagePath": "staticwebassets\\uploads\\contratos_20250601192047_5c74541a-8518-41ad-a5bc-f08fafd0f882.csv"
+    },
+    {
+      "Id": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\wwwroot\\uploads\\contratos_20250601192330_e694abf8-0548-4a5f-a9d8-2a3364e5e812.csv",
+      "PackagePath": "staticwebassets\\uploads\\contratos_20250601192330_e694abf8-0548-4a5f-a9d8-2a3364e5e812.csv"
+    },
+    {
+      "Id": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\wwwroot\\uploads\\contratos_20250601192530_43c4522a-efe9-4ad3-8c6c-73c8f09b5da8.csv",
+      "PackagePath": "staticwebassets\\uploads\\contratos_20250601192530_43c4522a-efe9-4ad3-8c6c-73c8f09b5da8.csv"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DesafioConcilig1.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

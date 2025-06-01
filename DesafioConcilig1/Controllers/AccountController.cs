@@ -17,22 +17,18 @@ namespace DesafioConcilig1.Controllers
             _context = context;
         }
 
-        // GET: /Account/Login
         [HttpGet]
         public IActionResult Login(string returnUrl = null)
         {
-            // Se já estiver logado, redireciona para Home/Index
             if (User.Identity != null && User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Home");
             }
 
             ViewData["ReturnUrl"] = returnUrl;
-            // Aponta para Views/Login/Index.cshtml
             return View("~/Views/Login/Index.cshtml");
         }
 
-        // POST: /Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(string nomeUsuario, string senha, string returnUrl = null)
@@ -45,7 +41,6 @@ namespace DesafioConcilig1.Controllers
                 return View("~/Views/Login/Index.cshtml");
             }
 
-            // Busca o usuário pelo NomeUsuario e Senha
             var usuario = _context.Usuarios
                 .FirstOrDefault(u => u.NomeUsuario == nomeUsuario && u.Senha == senha);
 
@@ -55,7 +50,6 @@ namespace DesafioConcilig1.Controllers
                 return View("~/Views/Login/Index.cshtml");
             }
 
-            // Cria os Claims e faz o SignIn para gerar o cookie
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
@@ -66,20 +60,17 @@ namespace DesafioConcilig1.Controllers
 
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
-            // Redireciona para returnUrl, se informado e válido, ou para Home/Index
             if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                 return Redirect(returnUrl);
 
             return RedirectToAction("Index", "Home");
         }
 
-        // POST: /Account/Logout
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            // Após logout, volta para a View de login em Views/Login/Index.cshtml
             return RedirectToAction("Login", "Account");
         }
     }

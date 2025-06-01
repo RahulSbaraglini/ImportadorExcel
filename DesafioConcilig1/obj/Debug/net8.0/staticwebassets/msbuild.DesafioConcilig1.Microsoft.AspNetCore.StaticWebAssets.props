@@ -976,5 +976,53 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\contratos_20250601192047_5c74541a-8518-41ad-a5bc-f08fafd0f882.csv))">
+      <SourceType>Package</SourceType>
+      <SourceId>DesafioConcilig1</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DesafioConcilig1</BasePath>
+      <RelativePath>uploads/contratos_20250601192047_5c74541a-8518-41ad-a5bc-f08fafd0f882.csv</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\contratos_20250601192047_5c74541a-8518-41ad-a5bc-f08fafd0f882.csv))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\contratos_20250601192330_e694abf8-0548-4a5f-a9d8-2a3364e5e812.csv))">
+      <SourceType>Package</SourceType>
+      <SourceId>DesafioConcilig1</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DesafioConcilig1</BasePath>
+      <RelativePath>uploads/contratos_20250601192330_e694abf8-0548-4a5f-a9d8-2a3364e5e812.csv</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\contratos_20250601192330_e694abf8-0548-4a5f-a9d8-2a3364e5e812.csv))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\contratos_20250601192530_43c4522a-efe9-4ad3-8c6c-73c8f09b5da8.csv))">
+      <SourceType>Package</SourceType>
+      <SourceId>DesafioConcilig1</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DesafioConcilig1</BasePath>
+      <RelativePath>uploads/contratos_20250601192530_43c4522a-efe9-4ad3-8c6c-73c8f09b5da8.csv</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\contratos_20250601192530_43c4522a-efe9-4ad3-8c6c-73c8f09b5da8.csv))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

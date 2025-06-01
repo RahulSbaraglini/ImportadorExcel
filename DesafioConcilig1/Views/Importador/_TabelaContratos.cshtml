@@ -1,0 +1,33 @@
+﻿@model List<DesafioConcilig1.Models.Contratos>
+
+@{
+    var contador = 1;
+}
+
+@if (Model != null && Model.Any())
+{
+    foreach (var contrato in Model)
+    {
+        <tr>
+            <td class="align-middle">@contador</td>
+            <td class="align-middle">@contrato.Nome</td>
+            <td class="align-middle">
+                @(
+                    contrato.Usuario != null
+                    ? contrato.Usuario.NomeUsuario
+                    : "—"
+                    )
+            </td>
+            <td class="align-middle">@contrato.DataImportacao.ToString("dd/MM/yyyy HH:mm")</td>
+            <td class="align-middle">@contrato.Valor.ToString("N2")</td>
+            <td class="align-middle">@contrato.Vencimento.ToString("dd/MM/yyyy")</td>
+        </tr>
+        contador++;
+    }
+}
+else
+{
+    <tr>
+        <td colspan="6" class="text-center py-4">Nenhum contrato importado ainda.</td>
+    </tr>
+}

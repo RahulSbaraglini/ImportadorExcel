@@ -12,7 +12,6 @@ namespace DesafioConcilig1.Controllers
         [HttpPost]
         public IActionResult Index(string email, string senha)
         {
-            // Simples exemplo (depois você valida via banco)
             if (email == "admin@email.com" && senha == "123")
             {
                 HttpContext.Session.SetString("usuarioLogado", email);

@@ -3,69 +3,103 @@
     ViewData["Title"] = "Importador de Arquivo";
 }
 
-<h1 class="text-center mb-4">Importador de Arquivo</h1>
-
-<!-- Mensagem geral de sucesso/erro -->
-<div id="mensagemGeral" style="display:none;" class="alert" role="alert"></div>
-
-<!-- Container que ocupa a maior parte da tela e centraliza o conteúdo abaixo verticalmente -->
-<div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 70vh;">
-    <!-- Dentro deste container, o datagrid e o botão ficam centralizados -->
-    <div style="width: 100%; max-width: 800px;">
-
-        <!-- Botão alinhado à direita -->
-        <div class="d-flex justify-content-end mb-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalImportar">
-                <i class="bi bi-upload"></i> Importar Excel/CSV
+<!-- Navbar e Logout (caso não estejam no _Layout) -->
+<div class="container-fluid p-0 mb-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="@Url.Action("Index", "Importador")">
+                Importador
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent" aria-controls="navbarContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-        </div>
 
-        <!-- Container scrollable para o datagrid (altura máxima definida) -->
-        <div style="max-height: 400px; overflow-y: auto;">
-            <table class="table table-striped table-bordered mb-0">
-                <thead class="table-dark">
-                    <tr>
-                        <th>#</th>
-                        <th>Nome</th>
-                        <th>Importado Por</th>
-                        <th>Data Importação</th>
-                    </tr>
-                </thead>
-                <tbody id="tbodyContratos">
-                    @if (Model != null && Model.Any())
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Itens de menu adicionais, se necessário -->
+                </ul>
+                <ul class="navbar-nav d-flex align-items-center">
+                    @if (User.Identity?.IsAuthenticated == true)
                     {
-                        var contador = 1;
-                        foreach (var contrato in Model)
-                        {
-                            <tr>
-                                <td>@contador</td>
-                                <td>@contrato.Nome</td>
-                                <td>
-                                    @(
-                                        contrato.Usuario != null 
-                                            ? contrato.Usuario.NomeUsuario 
-                                            : "—"
-                                    )
-                                </td>
-                                <td>@contrato.DataImportacao.ToString("dd/MM/yyyy HH:mm")</td>
-                            </tr>
-                            contador++;
-                        }
+                        <li class="nav-item me-3">
+                            <span class="navbar-text">
+                                Olá, <strong>@User.Identity.Name</strong>
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-box-arrow-right"></i> Sair
+                                </button>
+                            </form>
+                        </li>
                     }
                     else
                     {
-                        <tr>
-                            <td colspan="4" class="text-center">Nenhum contrato importado ainda.</td>
-                        </tr>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-primary btn-sm" href="@Url.Action("Login", "Account")">
+                                <i class="bi bi-box-arrow-in-right"></i> Entrar
+                            </a>
+                        </li>
                     }
-                </tbody>
-            </table>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container my-4">
+    <div class="card main-card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <div class="card-title mb-0">Dashboard de Contratos</div>
+            <div>
+                <!-- Botão para abrir Relatório de Clientes -->
+                <a asp-controller="Importador"
+                   asp-action="RelatorioClientes"
+                   class="btn btn-secondary me-2">
+                    <i class="bi bi-people-fill"></i> Relatório de Clientes
+                </a>
+
+                <!-- Botão de Importar Excel/CSV -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalImportar">
+                    <i class="bi bi-upload"></i> Importar Excel/CSV
+                </button>
+            </div>
         </div>
 
+        <div class="card-body p-3">
+            <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                <table class="table table-hover table-bordered mb-0">
+                    <thead class="table-dark position-sticky top-0">
+                        <tr>
+                            <th style="width: 3rem;">#</th>
+                            <th>Nome</th>
+                            <th>Importado Por</th>
+                            <th>Data Importação</th>
+                            <th>Valor</th>
+                            <th>Vencimento</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyContratos">
+                        @Html.Partial("~/Views/Importador/_TabelaContratos.cshtml", Model)
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Mensagem geral de sucesso/erro, posicionada abaixo da tabela -->
+            <div id="mensagemGeral"
+                 class="alert mt-3"
+                 role="alert"
+                 style="display:none; max-width: 100%; border-radius: 4px;">
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- Modal para seleção do arquivo (backdrop estático e sem ESC), centralizado verticalmente -->
+<!-- Modal de Importação (centralizado verticalmente) -->
 <div class="modal fade"
      id="modalImportar"
      data-bs-backdrop="static"
@@ -73,28 +107,47 @@
      tabindex="-1"
      aria-labelledby="modalImportarLabel"
      aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">  <!-- adicionado modal-dialog-centered -->
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <form id="formImport" method="post" enctype="multipart/form-data">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalImportarLabel">Selecione o arquivo (.xlsx ou .csv)</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalImportarLabel">
+                        <i class="bi bi-file-earmark-arrow-up-fill"></i> Importar Arquivo
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
                 <div class="modal-body">
                     @Html.AntiForgeryToken()
                     <div class="mb-3">
-                        <label for="arquivo" class="form-label">Arquivo</label>
-                        <input class="form-control" type="file" id="arquivo" name="arquivo"
-                               accept=".xlsx,.csv" required />
-                        <small class="form-text text-muted">
-                            Arraste e solte ou clique para selecionar um arquivo .xlsx ou .csv
+                        <label for="arquivo" class="form-label">
+                            Selecione o arquivo (.xlsx ou .csv)
+                        </label>
+                        <input class="form-control"
+                               type="file"
+                               id="arquivo"
+                               name="arquivo"
+                               accept=".xlsx,.csv"
+                               required />
+                        <small class="form-text text-muted d-block mt-1">
+                            Arraste e solte ou clique para selecionar.
                         </small>
                     </div>
-                    <div id="mensagemModal" style="display:none;" class="alert alert-danger" role="alert"></div>
+                    <div id="mensagemModal"
+                         class="alert alert-danger"
+                         role="alert"
+                         style="display:none;">
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Importar</button>
+                    <button type="button"
+                            class="btn btn-outline-secondary"
+                            data-bs-dismiss="modal">
+                        Cancelar
+                    </button>
+                    <button type="submit"
+                            class="btn btn-primary">
+                        <i class="bi bi-upload"></i> Importar
+                    </button>
                 </div>
             </form>
         </div>
@@ -102,7 +155,7 @@
 </div>
 
 @section Scripts {
-    <!-- Bootstrap 5 JS (caso não esteja no layout) -->
+    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoSOYfzF5YDFi6q9s9W4DD1zAsJRw4OV+NR7BfT0KF8dKGF"
             crossorigin="anonymous"></script>
@@ -112,8 +165,8 @@
             const form = document.getElementById("formImport");
             const mensagemGeral = document.getElementById("mensagemGeral");
             const mensagemModal = document.getElementById("mensagemModal");
-            const modalElemento = document.getElementById("modalImportar");
-            const modalBs = new bootstrap.Modal(modalElemento);
+            const modalImport = document.getElementById("modalImportar");
+            const modalImportBs = new bootstrap.Modal(modalImport);
 
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
@@ -147,12 +200,18 @@
                 })
                 .then(data => {
                     if (data.success) {
-                        modalBs.hide();
+                        modalImportBs.hide();
 
-                        mensagemGeral.className = "alert alert-success";
+                        mensagemGeral.className = "alert alert-success mt-3";
                         mensagemGeral.textContent = data.message;
                         mensagemGeral.style.display = "block";
 
+                        // Esconde a mensagem automaticamente após 5 segundos
+                        setTimeout(() => {
+                            mensagemGeral.style.display = "none";
+                        }, 5000);
+
+                        // Atualiza apenas o conteúdo de <tbody> chamando a action GetTabelaContratos
                         atualizarTabela();
                     } else {
                         mensagemModal.textContent = data.message;
@@ -172,20 +231,30 @@
             });
 
             function atualizarTabela() {
-                fetch('@Url.Action("Index", "Importador")', {
+                const urlParcial = '@Url.Action("GetTabelaContratos", "Importador")';
+
+                console.log("Chamando fetch para:", urlParcial);
+
+                fetch(urlParcial, {
                     method: 'GET'
                 })
-                .then(resp => resp.text())
+                .then(resp => {
+                    if (!resp.ok) {
+                        throw new Error("Falha ao buscar /Importador/GetTabelaContratos");
+                    }
+                    return resp.text();
+                })
                 .then(html => {
-                    const temp = document.createElement('template');
-                    temp.innerHTML = html;
-                    const novoTbody = temp.content.querySelector('#tbodyContratos');
-                    if (novoTbody) {
-                        document.getElementById('tbodyContratos').innerHTML = novoTbody.innerHTML;
+                    const tbodyAtual = document.getElementById('tbodyContratos');
+                    if (tbodyAtual) {
+                        tbodyAtual.innerHTML = html.trim();
+                        console.log("Tabela atualizada com sucesso.");
+                    } else {
+                        console.warn("Não encontrou #tbodyContratos na página atual.");
                     }
                 })
                 .catch(err => {
-                    console.warn("Não foi possível recarregar a tabela automaticamente: ", err);
+                    console.error("Erro ao atualizar tabela:", err);
                 });
             }
         });

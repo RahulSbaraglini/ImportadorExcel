@@ -3,32 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\controllers\\importadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\controllers\\importadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\models\\contratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\models\\contratos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\controllers\\importadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\controllers\\importadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\views\\importador\\relatorioclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\views\\importador\\relatorioclientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|c:\\users\\rahul sbaraglini\\documents\\projects\\importadorexcel\\desafioconcilig1\\views\\importador\\_tabelacontratos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09E35DED-380C-43F4-8825-864B27447CC6}|DesafioConcilig1\\DesafioConcilig1.csproj|solutionrelative:desafioconcilig1\\views\\importador\\_tabelacontratos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,95 +62,171 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Contratos.cs",
               "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Models\\Contratos.cs",
               "RelativeDocumentMoniker": "DesafioConcilig1\\Models\\Contratos.cs",
               "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Models\\Contratos.cs",
               "RelativeToolTip": "DesafioConcilig1\\Models\\Contratos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T20:37:30.106Z",
+              "WhenOpened": "2025-06-01T22:49:49.921Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Models\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "DesafioConcilig1\\Models\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Models\\LoginViewModel.cs",
-              "RelativeToolTip": "DesafioConcilig1\\Models\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "DesafioConcilig1\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T19:36:24.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "DesafioConcilig1\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "DesafioConcilig1\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAwE8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T19:36:00.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "DesafioConcilig1\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "DesafioConcilig1\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T19:08:16.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Program.cs",
-              "RelativeDocumentMoniker": "DesafioConcilig1\\Program.cs",
-              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Program.cs",
-              "RelativeToolTip": "DesafioConcilig1\\Program.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T18:50:00.892Z",
+              "WhenOpened": "2025-06-01T22:49:47.782Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Models\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "DesafioConcilig1\\Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T22:49:46.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "DesafioConcilig1\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T22:49:33.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DesafioConcilig1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T22:49:26.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "DesafioConcilig1\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T22:49:25.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "DesafioConcilig1\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T22:49:24.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "DesafioConcilig1\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T22:48:07.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DesafioConcilig1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T22:48:05.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RelatorioClientes.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Importador\\RelatorioClientes.cshtml",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Views\\Importador\\RelatorioClientes.cshtml",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Importador\\RelatorioClientes.cshtml",
+              "RelativeToolTip": "DesafioConcilig1\\Views\\Importador\\RelatorioClientes.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T22:28:46.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_TabelaContratos.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Importador\\_TabelaContratos.cshtml",
+              "RelativeDocumentMoniker": "DesafioConcilig1\\Views\\Importador\\_TabelaContratos.cshtml",
+              "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Importador\\_TabelaContratos.cshtml",
+              "RelativeToolTip": "DesafioConcilig1\\Views\\Importador\\_TabelaContratos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T22:26:56.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "DesafioConcilig1\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "DesafioConcilig1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAkwKUAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAAwAUBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-01T16:56:59.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "ImportadorController.cs",
               "DocumentMoniker": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\ImportadorController.cs",
               "RelativeDocumentMoniker": "DesafioConcilig1\\Controllers\\ImportadorController.cs",
               "ToolTip": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\Controllers\\ImportadorController.cs",
               "RelativeToolTip": "DesafioConcilig1\\Controllers\\ImportadorController.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAowG4AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwLUAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T16:52:35.866Z",
               "EditorCaption": ""

@@ -14,7 +14,6 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        // Semente de usuário padrão
         modelBuilder.Entity<Usuario>().HasData(new Usuario
         {
             Id = 1,
