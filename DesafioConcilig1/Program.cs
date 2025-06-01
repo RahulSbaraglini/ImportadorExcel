@@ -1,29 +1,48 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using DesafioConcilig1.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Adiciona serviços ao container
+// 1) DbContext para SQL Server
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
+
+// 2) Cache em memória e sessão
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// 3) Cookie Authentication
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Account/Login";
+        options.AccessDeniedPath = "/Account/Login";
+        // Ajuste rotas conforme desejar
+    });
+
 builder.Services.AddControllersWithViews();
-builder.Services.AddSession(); // Habilita sessão
 
 var app = builder.Build();
 
-// Configuração do pipeline HTTP
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
-}
-
+// Pipeline
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
+app.UseSession();
 
-app.UseSession(); // Middleware de sessão deve vir antes do UseAuthorization
+// Importante: autenticação antes da autorização
+app.UseAuthentication();
 app.UseAuthorization();
 
-// Define a rota padrão para a tela de login
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 app.Run();

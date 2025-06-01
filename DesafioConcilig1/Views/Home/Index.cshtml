@@ -1,8 +1,193 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<DesafioConcilig1.Models.Contratos>
+@{
+    ViewData["Title"] = "Importador de Arquivo";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1 class="text-center mb-4">Importador de Arquivo</h1>
+
+<!-- Mensagem geral de sucesso/erro -->
+<div id="mensagemGeral" style="display:none;" class="alert" role="alert"></div>
+
+<!-- Container que ocupa a maior parte da tela e centraliza o conteúdo abaixo verticalmente -->
+<div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 70vh;">
+    <!-- Dentro deste container, o datagrid e o botão ficam centralizados -->
+    <div style="width: 100%; max-width: 800px;">
+
+        <!-- Botão alinhado à direita -->
+        <div class="d-flex justify-content-end mb-2">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalImportar">
+                <i class="bi bi-upload"></i> Importar Excel/CSV
+            </button>
+        </div>
+
+        <!-- Container scrollable para o datagrid (altura máxima definida) -->
+        <div style="max-height: 400px; overflow-y: auto;">
+            <table class="table table-striped table-bordered mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Importado Por</th>
+                        <th>Data Importação</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyContratos">
+                    @if (Model != null && Model.Any())
+                    {
+                        var contador = 1;
+                        foreach (var contrato in Model)
+                        {
+                            <tr>
+                                <td>@contador</td>
+                                <td>@contrato.Nome</td>
+                                <td>
+                                    @(
+                                        contrato.Usuario != null 
+                                            ? contrato.Usuario.NomeUsuario 
+                                            : "—"
+                                    )
+                                </td>
+                                <td>@contrato.DataImportacao.ToString("dd/MM/yyyy HH:mm")</td>
+                            </tr>
+                            contador++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center">Nenhum contrato importado ainda.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
 </div>
+
+<!-- Modal para seleção do arquivo (backdrop estático e sem ESC), centralizado verticalmente -->
+<div class="modal fade"
+     id="modalImportar"
+     data-bs-backdrop="static"
+     data-bs-keyboard="false"
+     tabindex="-1"
+     aria-labelledby="modalImportarLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">  <!-- adicionado modal-dialog-centered -->
+        <div class="modal-content">
+            <form id="formImport" method="post" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalImportarLabel">Selecione o arquivo (.xlsx ou .csv)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    @Html.AntiForgeryToken()
+                    <div class="mb-3">
+                        <label for="arquivo" class="form-label">Arquivo</label>
+                        <input class="form-control" type="file" id="arquivo" name="arquivo"
+                               accept=".xlsx,.csv" required />
+                        <small class="form-text text-muted">
+                            Arraste e solte ou clique para selecionar um arquivo .xlsx ou .csv
+                        </small>
+                    </div>
+                    <div id="mensagemModal" style="display:none;" class="alert alert-danger" role="alert"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Importar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Bootstrap 5 JS (caso não esteja no layout) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoSOYfzF5YDFi6q9s9W4DD1zAsJRw4OV+NR7BfT0KF8dKGF"
+            crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("formImport");
+            const mensagemGeral = document.getElementById("mensagemGeral");
+            const mensagemModal = document.getElementById("mensagemModal");
+            const modalElemento = document.getElementById("modalImportar");
+            const modalBs = new bootstrap.Modal(modalElemento);
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                mensagemModal.style.display = "none";
+                mensagemGeral.style.display = "none";
+
+                const arquivoInput = document.getElementById("arquivo");
+                if (!arquivoInput.files.length) {
+                    mensagemModal.textContent = "Selecione um arquivo antes de enviar.";
+                    mensagemModal.style.display = "block";
+                    return;
+                }
+
+                const formData = new FormData(form);
+                const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+                fetch('@Url.Action("UploadAjax", "Importador")', {
+                    method: 'POST',
+                    headers: {
+                        "RequestVerificationToken": token
+                    },
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.text().then(text => {
+                            throw new Error(text || "Erro desconhecido ao chamar o servidor.");
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        modalBs.hide();
+
+                        mensagemGeral.className = "alert alert-success";
+                        mensagemGeral.textContent = data.message;
+                        mensagemGeral.style.display = "block";
+
+                        atualizarTabela();
+                    } else {
+                        mensagemModal.textContent = data.message;
+                        mensagemModal.className = "alert alert-danger";
+                        mensagemModal.style.display = "block";
+                    }
+                })
+                .catch(err => {
+                    let msg = err.message;
+                    if (msg.startsWith("<")) {
+                        msg = "Ocorreu um erro no servidor.";
+                    }
+                    mensagemModal.textContent = msg;
+                    mensagemModal.className = "alert alert-danger";
+                    mensagemModal.style.display = "block";
+                });
+            });
+
+            function atualizarTabela() {
+                fetch('@Url.Action("Index", "Importador")', {
+                    method: 'GET'
+                })
+                .then(resp => resp.text())
+                .then(html => {
+                    const temp = document.createElement('template');
+                    temp.innerHTML = html;
+                    const novoTbody = temp.content.querySelector('#tbodyContratos');
+                    if (novoTbody) {
+                        document.getElementById('tbodyContratos').innerHTML = novoTbody.innerHTML;
+                    }
+                })
+                .catch(err => {
+                    console.warn("Não foi possível recarregar a tabela automaticamente: ", err);
+                });
+            }
+        });
+    </script>
+}

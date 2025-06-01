@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rahul Sbaraglini\\source\\repos\\DesafioConcilig1\\DesafioConcilig1\\DesafioConcilig1.csproj": {}
+    "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\DesafioConcilig1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rahul Sbaraglini\\source\\repos\\DesafioConcilig1\\DesafioConcilig1\\DesafioConcilig1.csproj": {
+    "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\DesafioConcilig1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rahul Sbaraglini\\source\\repos\\DesafioConcilig1\\DesafioConcilig1\\DesafioConcilig1.csproj",
+        "projectUniqueName": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\DesafioConcilig1.csproj",
         "projectName": "DesafioConcilig1",
-        "projectPath": "C:\\Users\\Rahul Sbaraglini\\source\\repos\\DesafioConcilig1\\DesafioConcilig1\\DesafioConcilig1.csproj",
+        "projectPath": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\DesafioConcilig1.csproj",
         "packagesPath": "C:\\Users\\Rahul Sbaraglini\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rahul Sbaraglini\\source\\repos\\DesafioConcilig1\\DesafioConcilig1\\obj\\",
+        "outputPath": "C:\\Users\\Rahul Sbaraglini\\Documents\\projects\\ImportadorExcel\\DesafioConcilig1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rahul Sbaraglini\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.0.1, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.5, )"

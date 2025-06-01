@@ -1,5 +1,6 @@
 using DesafioConcilig1.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace DesafioConcilig1.Controllers
@@ -7,20 +8,21 @@ namespace DesafioConcilig1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly AppDbContext _context;
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
-        }
+            var listaContratos = _context.Contratos
+                .Include(c => c.Usuario)
+                .OrderByDescending(c => c.DataImportacao)
+                .ToList();
 
-        public IActionResult Privacy()
-        {
-            return View();
+            return View(listaContratos);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Importar Arquivo";
+    var tabela = ViewBag.Tabela as System.Data.DataTable;
+}
+
+<h2>Importar Arquivo Excel ou CSV</h2>
+
+@if (ViewBag.Erro != null)
+{
+    <div class="alert alert-danger">@ViewBag.Erro</div>
+}
+
+<form method="post" enctype="multipart/form-data" class="mb-4">
+    <div class="form-group">
+        <input type="file" name="arquivo" class="form-control-file" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Importar</button>
+</form>
+
+@if (tabela != null)
+{
+    <h4>Resultado:</h4>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    @foreach (System.Data.DataColumn col in tabela.Columns)
+                    {
+                        <th>@col.ColumnName</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (System.Data.DataRow row in tabela.Rows)
+                {
+                    <tr>
+                        @foreach (var item in row.ItemArray)
+                        {
+                            <td>@item</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
