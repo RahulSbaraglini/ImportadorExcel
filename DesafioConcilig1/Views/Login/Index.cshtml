@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<style>
+    html, body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden; /* evita scroll horizontal */
+        background-color: #e9ecef;
+        font-family: 'Segoe UI', sans-serif;
+        max-width: 100vw;
+    }
+
+    * {
+        box-sizing: border-box; /* previne estouro de largura */
+    }
+
+    .login-container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem; /* previne overflow em telas pequenas */
+        max-width: 100vw;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 400px;
+        background-color: #ffffff;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+
+<div class="login-container">
+    <div class="login-card">
+        <h2 class="text-center mb-4">Login</h2>
+
+        @if (ViewBag.MensagemErro != null)
+        {
+            <div class="alert alert-danger text-center">@ViewBag.MensagemErro</div>
+        }
+
+        <form method="post">
+            <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" required />
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" name="senha" required />
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+        </form>
+    </div>
+</div>
