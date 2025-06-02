@@ -19,6 +19,15 @@ namespace DesafioConcilig1.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Valor { get; set; }
 
+        [Required]
+        public string Produto { get; set; }
+
+        [Required]
+        public string Contrato { get; set; }
+
+        [Required]
+        public string CPF { get; set; }
+
         public DateTime DataImportacao { get; set; }
 
         [Required]
